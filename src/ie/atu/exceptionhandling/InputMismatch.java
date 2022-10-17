@@ -6,35 +6,30 @@ import java.util.InputMismatchException;
 public class InputMismatch {
 
 	public static void main(String args[]) {
-		// Instance Variables
-		Scanner userInput = null;
-		int numerator = 0;
-		int denominator = 0;
-		float result = 0; // Needs to be int to generate ArithmeticException
-
+		
+		// Create variable to store user input
+		int age = 0;
+		
+		// Ask user what age they are
+		System.out.println("Please enter your age: ");
+		
+		// Create scanner object to capture user input
+		Scanner userInput = new Scanner(System.in);
+		
+		// Try to read in the users age
 			try {
-				userInput = new Scanner(System.in); // Create scanner object
-				// Get numerator
-				System.out.print("Please enter an integer numerator: ");
-				numerator = userInput.nextInt();
-				// Get denominator
-				System.out.print("Please enter an integer denominator: ");
-				denominator = userInput.nextInt();
-				result = (float) (numerator / denominator);
-				// Print Result
-				System.out.println("\nResult: " + result);
+				age = userInput.nextInt();
+				System.out.println("You are " + age + " years old.");
 			} catch (InputMismatchException inputMisEx) {
-				System.err.println("\nException in thread: " + inputMisEx + "\n\tat " + inputMisEx.getStackTrace()[inputMisEx.getStackTrace().length - 1]);
-				//System.err.println("\nYou did not enter an integer!");
-				//System.out.println(inputMisEx.);
-				//System.err.println("\tat " + inputMisEx.getStackTrace()[inputMisEx.getStackTrace().length - 1]);
-				//System.out.println("\nPlease try again!\n");
+				System.out.print(inputMisEx);
+				System.err.println("\nYou did not enter an integer!\n");
+				//System.err.println("\nException in thread: " + inputMisEx + "\n\tat " + inputMisEx.getStackTrace()[inputMisEx.getStackTrace().length - 1]);
 			} finally {
 				userInput.close(); // Close Scanner object
 			}
-		
-		System.out.println("\n\n\nProgram continues on...");
-		System.out.println("Program ending gracefully...");
+	 
+	    
+		System.out.println("The program has ended. Goodbye!");
 
-	} // end main
-} // end Class
+	} // End main
+} // End class
