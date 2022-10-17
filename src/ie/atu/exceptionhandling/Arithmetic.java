@@ -2,23 +2,21 @@ package ie.atu.exceptionhandling;
 
 public class Arithmetic {
 
-	public static void main(String args[]) {
-
+	public static void main(String[] args) {
+		
+		float result = 0;
+		
 		try {
-			// Code that may raise exception
-			int result = 100 / 0;
-			// After exception is thrown the rest of the try block does not get executed
-			System.out.println("I will not get executed!");
+			// Code that raises exception
+			result = 10 / 0;
 			System.out.println(result);
-		} catch (ArithmeticException exception) {
-			System.out.println(exception);
-			// System.out.println(exception.getStackTrace()[0]);
-			// Use printStackTrace() method to print both
-			// exception.printStackTrace();  // This will give line number
+		} catch(ArithmeticException artEx) {
+			System.out.println(artEx);
+			System.out.println("You caused an artihmetic exception!");	
 		}
-
-		// Rest of code in the program
-		System.out.println("\n\n\nProgram continues running rest of the code...");
-
+		
+		// After exception is thrown the rest of the try block does not get executed
+		System.out.println("The program has ended!");
+		
 	} // End main
 } // End class
