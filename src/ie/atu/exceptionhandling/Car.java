@@ -11,10 +11,11 @@ public class Car {
     // Getters and Setters
 
     // Methods
-    public void readInCarDetails() throws FileNotFoundException {
+    @SuppressWarnings("unused")
+	public void readInCarDetails() {
         // The program does not compile, because we use FileReader() throws a checked exception, FileNotFoundException.
         try {
-            FileReader file = new FileReader("C:\\test\\a.txt");
+			FileReader file = new FileReader("C:\\test\\a.txt");
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         }

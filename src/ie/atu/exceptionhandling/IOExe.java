@@ -1,7 +1,5 @@
 package ie.atu.exceptionhandling;
 
-import java.io.FileNotFoundException;
-
 public class IOExe {
 	public static void main(String args[]) {
 
