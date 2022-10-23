@@ -20,8 +20,8 @@ public class FileCopyWithBufferHamlet {
 		String[] wordsArray;
 
 		try {
-			inFile = new File(".\\resources\\inputHamlet.txt");
-			outFile = new File(".\\resources\\outputHamlet.txt");
+			inFile = new File("./resources/inputHamlet.txt");
+			outFile = new File("./resources/outputHamlet.txt");
 			// Create File reader to get data from file.
 			fileReader = new FileReader(inFile);
 			br = new BufferedReader(fileReader);

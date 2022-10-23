@@ -6,8 +6,8 @@ public class CopyFileByteSimple {
 	public static void main(String args[]) throws IOException {
 
 		// Create stream references
-		FileInputStream byteInputStream = new FileInputStream(".\\resources\\input.txt");
-		FileOutputStream byteOutputStream = new FileOutputStream(".\\resources\\output.txt");
+		FileInputStream byteInputStream = new FileInputStream("./resources/input.txt");
+		FileOutputStream byteOutputStream = new FileOutputStream("./resources/output.txt");
 		// Create int to read and write bytes
 		int b = 0;
 

@@ -18,8 +18,8 @@ public class CopyFileByte {
 
 		// Protect stream creation and read/write code as it may throw an exception
 		try {
-			byteInputStream = new FileInputStream(".\\resources\\input.txt");
-			byteOutputStream = new FileOutputStream(".\\resources\\output.txt");
+			byteInputStream = new FileInputStream("./resources/input.txt");
+			byteOutputStream = new FileOutputStream("./resources/output.txt");
 
 			System.out.println("Byte \t| Character");
 			System.out.println("-------------------");

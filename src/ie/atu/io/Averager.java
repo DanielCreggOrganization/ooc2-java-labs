@@ -16,7 +16,7 @@ public class Averager {
 		int nextInt = 0;
 
 		try {
-			file = new File(".\\resources\\results.txt");
+			file = new File("./resources/results.txt");
 			scannerObject = new Scanner(file);
 			// Create an array to hold the ints
 			listOfInts = new ArrayList<Integer>();

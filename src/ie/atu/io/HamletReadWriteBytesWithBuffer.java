@@ -5,8 +5,8 @@ import java.io.*;
 public class HamletReadWriteBytesWithBuffer {
 
 	public static void main(String[] args) throws Exception {
-		File fileToCopy = new File(".\\resources\\hamlet.txt"); 
-		File copyFileDest = new File(".\\resources\\hamletCopy.txt");
+		File fileToCopy = new File("./resources/inputHamlet.txt"); 
+		File copyFileDest = new File("./resources/outputHamlet.txt");
 		FileInputStream inputStream = new FileInputStream(fileToCopy);
 		InputStreamReader streamReader = new InputStreamReader(inputStream);
 		BufferedReader br = new BufferedReader(streamReader);

@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class FileIOTest { // saved as "FileIOTest.java"
 	public static void main(String[] args) throws IOException {
-		File inputFile = new File(".\\resources\\in.txt");
-		File outputFile = new File(".\\resources\\out.txt");
+		File inputFile = new File("./resources/in.txt");
+		File outputFile = new File("./resources/out.txt");
 		Scanner inputScanner = new Scanner(inputFile);
 		Formatter outputFormatted = new Formatter(outputFile);
 		
