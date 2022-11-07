@@ -57,6 +57,6 @@ public class CopyFileByte {
 				ioObject.printStackTrace();
 			}
 		}
-
+		System.out.println("Finsihed reading and writing.");
 	} // End main
 } // End Class

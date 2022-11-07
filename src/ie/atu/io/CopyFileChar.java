@@ -53,5 +53,6 @@ public class CopyFileChar {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("Finihsed reading and writing.");
 	} // End main
 } // End Class

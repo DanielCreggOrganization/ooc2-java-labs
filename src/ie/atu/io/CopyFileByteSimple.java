@@ -1,6 +1,8 @@
 package ie.atu.io;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class CopyFileByteSimple {
 	public static void main(String args[]) throws IOException {
@@ -8,6 +10,7 @@ public class CopyFileByteSimple {
 		// Create stream references
 		FileInputStream byteInputStream = new FileInputStream("./resources/input.txt");
 		FileOutputStream byteOutputStream = new FileOutputStream("./resources/output.txt");
+		
 		// Create int to read and write bytes
 		int b = 0;
 
@@ -20,6 +23,8 @@ public class CopyFileByteSimple {
 		// Close streams
 		byteInputStream.close();
 		byteOutputStream.close();
+		
+		System.out.println("Finished reading and writing!");
 
 	} // End main
 } // End Class
