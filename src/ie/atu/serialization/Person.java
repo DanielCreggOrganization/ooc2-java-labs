@@ -11,9 +11,9 @@ public class Person implements Serializable {
     private int age;
     
     // Constructor
-    public Demo(String name, int age) {
-        this.age = a;
-        this.name = b;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     } // End constructor
 
 } // End of class

@@ -1,6 +1,5 @@
 package ie.atu.serialization;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -8,32 +7,25 @@ import java.io.Serializable;
 
 public class Main implements Serializable {
 
-	private static final long serialVersionUID = 100L;
-
 	public static void main(String[] args) {
-		Person employeeObject1 = new Person("G12345678", "Murphy");
-		File outputByteFile = new File(".\\resources\\employeeByteFile.ser");
+		// Create Person object
+		Person personObject1 = new Person("John", 25);
+	
 		FileOutputStream outputByteFileStream = null;
 		ObjectOutputStream outputByteFileStreamForObjects = null;
-		
-		// Print out Employee Fields
-		System.out.println(employeeObject1.toString());
 
 		// Serialization
 		try {
-			// Saving of object to a file
-			outputByteFileStream = new FileOutputStream(outputByteFile);
+			// Create a byte stream connected to an output file
+			outputByteFileStream = new FileOutputStream("./resources/personByteFile.ser");
+			// Upgrade the byte stream to accommodate the streaming of Objects
 			outputByteFileStreamForObjects = new ObjectOutputStream(outputByteFileStream);
-
-			// Method for serialization of object
-			outputByteFileStreamForObjects.writeObject(employeeObject1);
-
-			outputByteFileStreamForObjects.close();
-			outputByteFileStream.close();
-
+			// Commence the serialization of the object
+			outputByteFileStreamForObjects.writeObject(personObject1);
 			System.out.println("Object has been serialized");
-		} catch (IOException ex) {
-			System.out.println("IOException is caught");
+		} catch (IOException ioExc) {
+			System.out.println("IOException was caught");
+			ioExc.printStackTrace();
 		} // End try/catch
 
 	} // End main
