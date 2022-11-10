@@ -3,7 +3,10 @@ package ie.atu.serialization;
 import java.io.Serializable;
 
 public class Car implements Serializable {
-
+	/* 
+	 * The serialVersionUID is a universal version identifier for a Serializable class.
+	 * Deserialization uses this number to ensure that a loaded class corresponds exactly to a serialized object.
+	 */
 	private static final long serialVersionUID = -644012276880766677L;
 	private transient String owner;
 	private String make;

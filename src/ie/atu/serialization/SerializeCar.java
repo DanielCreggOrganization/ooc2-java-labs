@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Serializer {
+public class SerializeCar {
 	public static void main(String[] args) {
 
 		Car carObject1 = null; // Car Object to serialize

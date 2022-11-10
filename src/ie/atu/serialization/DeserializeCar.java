@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Deserializer {
+public class DeserializeCar {
 	public static void main(String[] args) {
 
 		// Car deserializedCarObject = null; // Car Object to store deserialized Car
