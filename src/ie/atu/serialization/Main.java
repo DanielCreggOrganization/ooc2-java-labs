@@ -6,18 +6,18 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+	public static void main(String[] args) {	
+		System.out.println("Part 1:");
+		// PART 1: Serialize and De-Serialize an employee object.
 
-	public static void main(String[] args) {
-
+		// Create employee object
 		Employee employeeObject1 = new Employee("827384773H", "Collins");
-		System.out.println("PPSN: " + employeeObject1.getPpsn() + ", Surname: " + employeeObject1.getSurname()
-				+ ", Company: " + Employee.COMPANY_NAME);
+		System.out.println(employeeObject1.toString());
 
-		// Declare required streams
+		// Declare required streams for serialization
 		FileOutputStream outputByteFileStream = null;
 		FileInputStream inputByteFileStream = null;
 		ObjectOutputStream outputByteFileStreamForObjects = null;
@@ -31,7 +31,7 @@ public class Main {
 			outputByteFileStreamForObjects = new ObjectOutputStream(outputByteFileStream);
 			// Serialize object
 			outputByteFileStreamForObjects.writeObject(employeeObject1);
-			System.out.println("Object has been serialized!");
+			System.out.println("Employee object has been serialized!");
 		} catch (IOException IOExc) {
 			IOExc.printStackTrace();
 		}
@@ -44,17 +44,15 @@ public class Main {
 			inputByteFileStreamForObjects = new ObjectInputStream(inputByteFileStream);
 			// De-Serialize object
 			Employee employeeObject2 = (Employee) inputByteFileStreamForObjects.readObject();
-			System.out.println(
-					employeeObject2.getPpsn() + " " + employeeObject2.getSurname() + " " + Employee.COMPANY_NAME);
-			System.out.println("Object has been deserialized");
-			System.out.println("PPSN: " + employeeObject1.getPpsn() + ", Surname: " + employeeObject1.getSurname()
-					+ ", Company: " + Employee.COMPANY_NAME);
+			System.out.println("Employee object has been deserialized");
+			System.out.println(employeeObject2.toString());
 		} catch (IOException IOExc) {
 			IOExc.printStackTrace();
 		} catch (ClassNotFoundException CNFExc) {
 			CNFExc.printStackTrace();
 		}
 
+		System.out.println("\nPart 2:");
 		// PART 2: Serialize and De-Serialize a list of object. A list itself is an
 		// object.
 
@@ -69,7 +67,7 @@ public class Main {
 		carList1.add(carObject1);
 		carList1.add(carObject2);
 		System.out.println(carList1);
-		
+
 		// Serialize List of Cars
 		try {
 			// Set up object stream to file
@@ -82,7 +80,7 @@ public class Main {
 		} catch (IOException IOExc) {
 			IOExc.printStackTrace();
 		}
-		
+
 		// De-Serialize List of Cars
 		try {
 			// Create a file input stream
@@ -98,6 +96,5 @@ public class Main {
 		} catch (ClassNotFoundException CNFExc) {
 			CNFExc.printStackTrace();
 		}
-
 	} // End main method
 } // End Main class

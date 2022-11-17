@@ -39,4 +39,9 @@ class Employee implements Serializable {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
+
+	@Override
+	public String toString() {
+		return "PPSN: " + this.getPpsn() + ", Surname: " + this.getSurname() + ", Company: " + COMPANY_NAME;
+	}
 }
