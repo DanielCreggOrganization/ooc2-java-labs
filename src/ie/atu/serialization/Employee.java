@@ -11,11 +11,12 @@ class Employee implements Serializable {
 	 * sender's class, then deserialization will result in an InvalidClassException.
 	 */
 	private static final long serialVersionUID = 1L;
+	public static String COMPANY_NAME = "Intel"; // Is not serialized
 
 	// Instance Variables
 	private transient String ppsn; // Is not serialized
 	private String surname;
-	
+
 	// Constructor
 	public Employee(String ppsn, String surname) {
 		this.ppsn = ppsn;
@@ -38,10 +39,4 @@ class Employee implements Serializable {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-
-	@Override
-	public String toString() {
-		return "Employee [ppsn=" + ppsn + ", surname=" + surname + "]";
-	}
-
 }

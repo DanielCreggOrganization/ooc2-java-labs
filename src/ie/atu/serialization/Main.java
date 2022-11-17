@@ -1,50 +1,54 @@
 package ie.atu.serialization;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 
-public class Main implements Serializable {
+public class Main {
 
 	public static void main(String[] args) {
-		// Create Person object
-		Person personObject1 = new Person("John", 25);
-		System.out.println("Person object to serialize: " + personObject1.getName() + ", " + personObject1.getAge());
-	
-		// Required for serialization
-		FileOutputStream outputByteFileStream = null;
-		ObjectOutputStream outputByteFileStreamForObjects = null;
-		// Required for de-serialization
-		FileInputStream inputByteFileStream = null;
-		ObjectInputStream inputByteFileStreamForObjects = null;
-		
-		try {
-			// Serialization
-			// Create a byte stream connected to an output file
-			outputByteFileStream = new FileOutputStream("./resources/personByteFile.ser");
-			// Upgrade the byte stream to accommodate the streaming of Objects
-			outputByteFileStreamForObjects = new ObjectOutputStream(outputByteFileStream);
-			// Commence the serialization of the object
-			outputByteFileStreamForObjects.writeObject(personObject1);
-			System.out.println("Object has been serialized");
-			
-			// De-Serialization
-			// Create a byte stream connected to an input file
-			inputByteFileStream = new FileInputStream("./resources/personByteFile.ser");
-			// Upgrade the byte stream to accommodate the streaming of Objects
-			inputByteFileStreamForObjects = new ObjectInputStream(inputByteFileStream);
-			// Commence the de-serialization of the object and store it in a new object
-			Person personObject2 = (Person) inputByteFileStreamForObjects.readObject();
-			System.out.println("Object has been de-serialized");
-			
-			System.out.println("Person object de-serialized: " + personObject2.getName() + ", " + personObject2.getAge());
-		} catch (IOException | ClassNotFoundException e) {
-			System.out.println("Exception was caught");
-			e.printStackTrace();
-		} // End try/catch
 
-	} // End main
-} // End Class
+		Employee employeeObject1 = new Employee("827384773H", "Collins");
+		System.out.println("Employee PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company" + Employee.COMPANY_NAME);
+
+		// Declare required streams
+		FileOutputStream outputByteFileStream = null;
+		FileInputStream inputByteFileStream = null;
+		ObjectOutputStream outputByteFileStreamForObjects = null;
+		ObjectInputStream inputByteFileStreamForObjects = null;
+
+		// SERIALIZATION
+		try {
+			// Create a file output stream
+			outputByteFileStream = new FileOutputStream("./resources/employee.ser");
+			// Upgrade file output stream to object output stream
+			outputByteFileStreamForObjects = new ObjectOutputStream(outputByteFileStream);
+			// Serialize object
+			outputByteFileStreamForObjects.writeObject(employeeObject1);
+			System.out.println("Object has been serialized!");
+		} catch (IOException IOExc) {
+			IOExc.printStackTrace();
+		}
+		
+		// DE-SERIALIZATION
+		try {
+			// Create a file input stream
+			inputByteFileStream = new FileInputStream("./resources/employee.ser");
+			// Upgrade file input stream to object input stream
+			inputByteFileStreamForObjects = new ObjectInputStream(inputByteFileStream);
+			// De-Serialize object
+			Employee employeeObject2 = (Employee) inputByteFileStreamForObjects.readObject();
+			System.out.println( employeeObject2.getPpsn() + " " + employeeObject2.getSurname() + " " + Employee.COMPANY_NAME);
+			System.out.println("Object has been deserialized");
+			System.out.println("Employee PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company" + Employee.COMPANY_NAME);
+		} catch (IOException IOExc) {
+			IOExc.printStackTrace();
+		} catch (ClassNotFoundException CNFExc) {
+			CNFExc.printStackTrace();
+		}
+
+	} // End main method
+} // End Main class
