@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Employee employeeObject1 = new Employee("827384773H", "Collins");
-		System.out.println("Employee PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company" + Employee.COMPANY_NAME);
+		System.out.println("PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company: " + Employee.COMPANY_NAME);
 
 		// Declare required streams
 		FileOutputStream outputByteFileStream = null;
@@ -43,7 +43,7 @@ public class Main {
 			Employee employeeObject2 = (Employee) inputByteFileStreamForObjects.readObject();
 			System.out.println( employeeObject2.getPpsn() + " " + employeeObject2.getSurname() + " " + Employee.COMPANY_NAME);
 			System.out.println("Object has been deserialized");
-			System.out.println("Employee PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company" + Employee.COMPANY_NAME);
+			System.out.println("PPSN: " + employeeObject1.getPpsn()+ ", Surname: " + employeeObject1.getSurname() + ", Company: " + Employee.COMPANY_NAME);
 		} catch (IOException IOExc) {
 			IOExc.printStackTrace();
 		} catch (ClassNotFoundException CNFExc) {
