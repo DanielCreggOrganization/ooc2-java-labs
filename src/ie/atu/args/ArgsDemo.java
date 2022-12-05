@@ -16,10 +16,10 @@ public class ArgsDemo {
 //			// System.out.println("Argument "+ (i + 1) + ": " + args[i]);
 //		}
 
-		// Print ' ROCKS!' after every GMIT arguments passed to this program
-//		System.out.println("Searching for GMIT argument...");
+		// Print ' ROCKS!' after every ATU arguments passed to this program
+//		System.out.println("Searching for ATU argument...");
 //		for (int i = 0; i < args.length; i++) {
-//			if (args[i].equals("GMIT")) {
+//			if (args[i].equals("ATU")) {
 //				System.out.println("Argument "+ (i + 1) + ": " + args[i] + " ROCKS!");
 //			} else {
 //				System.out.println("Argument "+ (i + 1) + ": " + args[i]);
