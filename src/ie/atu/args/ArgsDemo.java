@@ -16,7 +16,7 @@ public class ArgsDemo {
 //			// System.out.println("Argument "+ (i + 1) + ": " + args[i]);
 //		}
 
-		// Print ' ROCKS!' after every ATU arguments passed to this program
+//		// Print ' ROCKS!' after every ATU arguments passed to this program
 //		System.out.println("Searching for ATU argument...");
 //		for (int i = 0; i < args.length; i++) {
 //			if (args[i].equals("ATU")) {
@@ -34,7 +34,7 @@ public class ArgsDemo {
 
 		// Print every second argument passed to this program
 //		System.out.println("Every Second Argument is:");
-//		for (int i = 0; i < args.length; i+=2) {
+//		for (int i = 0; i < args.length; i += 2) {
 //			System.out.println("Argument "+ (i + 1) + ": " + args[i]);
 //		}
 
