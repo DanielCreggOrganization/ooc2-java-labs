@@ -18,5 +18,6 @@
         "docs": false,
         ".gitignore": false,
         ".vscode": false
-      }
+      },
+      "java.dependency.packagePresentation": "hierarchical"
 }
