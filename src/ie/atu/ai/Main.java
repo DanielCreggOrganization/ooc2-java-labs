@@ -28,10 +28,12 @@ public class Main {
         in.close();
         
         String myResponse = response.toString();
-        System.out.println("\n\n" + myResponse + "\n\n");
+        // Print full response
+        // System.out.println("\n\n" + myResponse + "\n\n");
+        
         // Manually parsing the JSON response
         int sequenceStartIndex = myResponse.indexOf("\"sequence\":") + 12;
-        int sequenceEndIndex = myResponse.indexOf("\",", sequenceStartIndex);
+        int sequenceEndIndex = myResponse.indexOf(".", sequenceStartIndex) + 1;
         String sequence = myResponse.substring(sequenceStartIndex, sequenceEndIndex);
         
         int scoreStartIndex = myResponse.indexOf("\"score\":") + 8;
