@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String API_TOKEN = "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";
         String MODEL_ID = "bert-base-uncased";
+        //String MODEL_ID = "distilbert-base-cased-distilled-squad";
         String url = "https://api-inference.huggingface.co/models/" + MODEL_ID;
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -14,6 +15,7 @@ public class Main {
         con.setRequestProperty("Content-Type", "application/json");
         con.setRequestProperty("Authorization", "Bearer " + API_TOKEN);
         String input = "{\"inputs\":\"The goal of life is [MASK].\"}";
+        //String input = "{\"inputs\":\"What is the capital of France?\"}";
         con.setDoOutput(true);
         DataOutputStream wr = new DataOutputStream(con.getOutputStream());
         wr.writeBytes(input);
