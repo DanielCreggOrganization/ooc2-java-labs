@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class AskAQuestion {
     public static void main(String[] args) throws Exception {
         String API_TOKEN = "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";
-        String modelId = "microsoft/DialoGPT-medium";
+        String modelId = "microsoft/DialoGPT-large";
         Scanner userInput = new Scanner(System.in);
         
         System.out.println("Type in a question... : \n");
