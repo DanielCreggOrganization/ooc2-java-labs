@@ -19,5 +19,7 @@
         ".gitignore": false,
         ".vscode": false
       },
-      "java.dependency.packagePresentation": "hierarchical"
+      "java.dependency.packagePresentation": "hierarchical",
+      // increase font size
+      "editor.fontSize": 18,
 }
