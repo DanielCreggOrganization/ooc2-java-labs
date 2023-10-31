@@ -1,4 +1,4 @@
-package ie.atu.serialization;
+package ie.atu.serialization.listserialization;
 
 import java.io.Serializable;
 
@@ -16,8 +16,8 @@ public class Car implements Serializable {
 
 	// Constructor
 	public Car(String owner, int ageOfCar) {
-		this.ageOfCar = ageOfCar;
 		this.setOwner(owner);
+		this.ageOfCar = ageOfCar;
 	}
 
 	public String getOwner() {
@@ -39,6 +39,5 @@ public class Car implements Serializable {
 	@Override
 	public String toString(){
 		return "Owner: " + this.getOwner() +", Age of Car: " + this.getAgeOfCar();
-		
 	}
 }

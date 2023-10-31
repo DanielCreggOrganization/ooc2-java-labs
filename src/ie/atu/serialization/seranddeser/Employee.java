@@ -1,4 +1,4 @@
-package ie.atu.serialization;
+package ie.atu.serialization.seranddeser;
 
 import java.io.Serializable;
 
