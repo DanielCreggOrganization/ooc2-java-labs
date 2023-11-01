@@ -23,6 +23,7 @@ public class Main {
         // Add car objects to the arraylist
         carList1.add(carObject1);
         carList1.add(carObject2);
+        System.out.println("Car list created and populated!");
         System.out.println(carList1);
 
         // ******************** Serialize List of Cars ******************** //
@@ -31,9 +32,6 @@ public class Main {
             outputFileStream = new FileOutputStream("./resources/cars.ser");
             // Create an object output stream to write objects the file output stream
             outputObjectStream = new ObjectOutputStream(outputFileStream);
-            // Serialize Car object and stream to file for storage
-            // objectOutStream.writeObject(carObject1);
-            // objectOutStream.writeObject(carObject2);
             // Serialize ArrayList object of Cars and stream to file for storage
             outputObjectStream.writeObject(carList1);
             System.out.println("Car list object has been serialized!");

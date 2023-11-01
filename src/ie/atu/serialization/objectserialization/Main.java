@@ -1,5 +1,5 @@
 //This example is used to test the serialization and de-serialization of objects.
-package ie.atu.serialization.seranddeser;
+package ie.atu.serialization.objectserialization;
 
 import java.io.FileInputStream; // Used to read from a file
 import java.io.FileOutputStream; // Used to write to a file
