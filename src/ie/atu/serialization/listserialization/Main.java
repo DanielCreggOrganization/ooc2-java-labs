@@ -17,8 +17,8 @@ public class Main {
         List<Car> carList1 = new ArrayList<>(); // Create Arraylist to store Cars
 
         // Create 2 Car objects to be serialized
-        Car carObject1 = new Car("John F. Kennedy", 3);
-        Car carObject2 = new Car("Micheal D. Higgins", 5);
+        Car carObject1 = new Car("John", 3);
+        Car carObject2 = new Car("Micheal", 5);
 
         // Add car objects to the arraylist
         carList1.add(carObject1);
@@ -53,7 +53,7 @@ public class Main {
             inputFileStream = new FileInputStream("./resources/cars.ser");
             // Create an object input stream to read objects from the file input stream.
             inputObjectStream = new ObjectInputStream(inputFileStream);
-            // Suppress warning for unchecked cast
+            // Suppress warning for unchecked cast. There is no way to check at runtime if the ArrayList contains Car objects.
             @SuppressWarnings("unchecked") 
             // Deserialize ArrayList object of Cars and stream from file
             List<Car> carList2 = (ArrayList<Car>) inputObjectStream.readObject();
