@@ -1,68 +1,50 @@
-//This example is used to test the serialization and de-serialization of objects.
 package ie.atu.serialization.objectserialization;
 
-import java.io.FileInputStream; // Used to read from a file
-import java.io.FileOutputStream; // Used to write to a file
-import java.io.ObjectInputStream; // Used to read objects from a file
-import java.io.ObjectOutputStream; // Used to write objects to a file
+import java.io.*;
 
 public class Main {
 	public static void main(String[] args) {
-		// Serialize and De-Serialize an employee object.
+		// Define a constant for the file path where the serialized object will be stored
+		final String FILE_PATH = "./resources/employee.ser";
 
-		// Create employee object. This employee object that will be serialized (i.e.
-		// converted to bytes and stored in a file)
-		Employee employeeObject1 = new Employee("827384773H", "Collins");
-		System.out.println(employeeObject1.toString()); // Print employee object
+		// Create an Employee object
+		Employee employeeBeforeSerialization = new Employee("827384773H", "Collins");
 
-		// Create file streams. These are used to read and write bytes to a file.
-		FileOutputStream outputByteFileStream = null; // Used to write bytes to a file
-		FileInputStream inputByteFileStream = null; // Used to read bytes from a file
-		ObjectOutputStream outputByteFileStreamForObjects = null; // Used to write objects to a file
-		ObjectInputStream inputByteFileStreamForObjects = null; // Used to read objects from a file
+		// Print the details of the employee before serialization
+		System.out.println("Before Serialization: " + employeeBeforeSerialization);
 
-		// SERIALIZATION
-		try {
-			// Create a file output stream. This is used to write bytes to a file.
-			outputByteFileStream = new FileOutputStream("./resources/employee.ser");
-			// Upgrade file output stream to object output stream
-			outputByteFileStreamForObjects = new ObjectOutputStream(outputByteFileStream);
-			// Serialize Employee object and stream to file for storage
-			outputByteFileStreamForObjects.writeObject(employeeObject1);
+		// Try-with-resources block to handle the serialization
+		try (
+			// Create a FileOutputStream to write to the specified file path
+			FileOutputStream fos = new FileOutputStream(FILE_PATH);
+			// Create an ObjectOutputStream to write objects to the FileOutputStream
+			ObjectOutputStream oos = new ObjectOutputStream(fos)
+		) {
+			// Write the employee object to the ObjectOutputStream
+			oos.writeObject(employeeBeforeSerialization);
+			// Indicate that the employee object has been serialized
 			System.out.println("Employee object has been serialized!");
-		} catch (Exception ex) { // Catch all exceptions
-			ex.printStackTrace(); // Print exception details
-		} finally { // Finally block is always executed
-			// Close file streams
-			try {
-				outputByteFileStream.close();
-				outputByteFileStreamForObjects.close();
-			} catch (Exception ex) { // Catch all exceptions
-				ex.printStackTrace(); // Print exception details
-			}
+		} catch (IOException ex) {
+			// Print any IOException that occurs during serialization
+			ex.printStackTrace();
 		}
 
-		// DE-SERIALIZATION
-		try {
-			// Create a file input stream
-			inputByteFileStream = new FileInputStream("./resources/employee.ser");
-			// Upgrade file input stream to object input stream
-			inputByteFileStreamForObjects = new ObjectInputStream(inputByteFileStream);
-			// De-Serialize object
-			Employee employeeObject2 = (Employee) inputByteFileStreamForObjects.readObject();
+		// Try-with-resources block to handle the deserialization
+		try (
+			// Create a FileInputStream to read from the specified file path
+			FileInputStream fis = new FileInputStream(FILE_PATH);
+			// Create an ObjectInputStream to read objects from the FileInputStream
+			ObjectInputStream ois = new ObjectInputStream(fis)
+		) {
+			// Read the employee object from the ObjectInputStream
+			Employee employeeAfterDeserialization = (Employee) ois.readObject();
+			// Indicate that the employee object has been deserialized
 			System.out.println("Employee object has been deserialized");
-			System.out.println(employeeObject2.toString());
-		} catch (Exception ex) { // Catch all exceptions
-			ex.printStackTrace(); // Print exception details
-		} finally { // Finally block is always executed
-			// Close file streams
-			try {
-				inputByteFileStream.close();
-				inputByteFileStreamForObjects.close();
-			} catch (Exception ex) { // Catch all exceptions
-				ex.printStackTrace(); // Print exception details
-			}
+			// Print the details of the employee after deserialization
+			System.out.println("After Deserialization: " + employeeAfterDeserialization);
+		} catch (IOException | ClassNotFoundException ex) {
+			// Print any IOException or ClassNotFoundException that occurs during deserialization
+			ex.printStackTrace();
 		}
-
-	} // End main method
-} // End Main class
+	}
+}
