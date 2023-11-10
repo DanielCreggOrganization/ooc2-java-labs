@@ -1,29 +1,32 @@
 package ie.atu.serialization.objectserialization;
 
 import java.io.Serializable;
+import java.util.Objects;
 
+/**
+ * Represents an employee in a company.
+ */
 class Employee implements Serializable {
-	/*
-	 * Used during deserialization to verify that the sender and receiver of a
-	 * serialized object have loaded classes for that object that are compatible
-	 * with respect to serialization. If the receiver has loaded a class for the
-	 * object that has a different serialVersionUID than that of the corresponding
-	 * sender's class, then deserialization will result in an InvalidClassException.
-	 */
+	// The serialVersionUID is used during deserialization to verify that the sender
+	// and receiver of a serialized object have loaded classes for that object that
+	// are compatible with respect to serialization.
 	private static final long serialVersionUID = 1L;
-	public static String COMPANY_NAME = "Intel"; // Is not serialized
-
-	// Instance Variables
+	public static final String COMPANY_NAME = "Intel"; // Is not serialized
 	private transient String ppsn; // Is not serialized
 	private String surname;
 
-	// Constructor
+	/**
+	 * Constructs a new Employee with the specified PPSN and surname.
+	 *
+	 * @param ppsn    the PPSN of the employee
+	 * @param surname the surname of the employee
+	 */
 	public Employee(String ppsn, String surname) {
 		this.ppsn = ppsn;
 		this.surname = surname;
 	}
 
-	// Getters and Setters
+	// Getters and setters
 	public String getPpsn() {
 		return ppsn;
 	}
@@ -42,6 +45,7 @@ class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return "PPSN: " + this.getPpsn() + ", Surname: " + this.getSurname() + ", Company: " + COMPANY_NAME;
+		return "PPSN: " + Objects.toString(this.getPpsn()) + ", Surname: " + Objects.toString(this.getSurname())
+				+ ", Company: " + COMPANY_NAME;
 	}
 }
