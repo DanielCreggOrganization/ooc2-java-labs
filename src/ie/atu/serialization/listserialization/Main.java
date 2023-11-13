@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        // Use a constant for the file path
+        // Use a constant for the file path because it is used multiple times.
         final String FILE_PATH = "./resources/cars.ser";
         List<Car> carList1 = new ArrayList<>(); // Create Arraylist to store Cars
 
@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Car list created and populated!");
         System.out.println(carList1);
 
-        // ******************** Serialize List of Cars ******************** //
+        // ***** Serialize List Object which contains car objects ***** //
         try (
             // Create a file output stream to write bytes to a file
             FileOutputStream outputFileStream = new FileOutputStream(FILE_PATH);
@@ -38,14 +38,15 @@ public class Main {
             ex.printStackTrace(); // Print exception details
         }
 
-        // ******************* Deserialize List of Cars ******************* //
+        // ***** Deserialize List Object which contains car objects ***** //
         try (
             // Create a file input stream to read bytes from a file.
             FileInputStream inputFileStream = new FileInputStream(FILE_PATH);
             // Create an object input stream to read objects from the file input stream.
             ObjectInputStream inputObjectStream = new ObjectInputStream(inputFileStream)
         ) {
-            // Suppress warning for unchecked cast. There is no way to check at runtime if the ArrayList contains Car objects.
+            // Suppress warning for unchecked cast. 
+            // There is no way to check at runtime if the ArrayList contains Car objects.
             @SuppressWarnings("unchecked") 
             // Deserialize ArrayList object of Cars and stream from file
             List<Car> carList2 = (ArrayList<Car>) inputObjectStream.readObject();
