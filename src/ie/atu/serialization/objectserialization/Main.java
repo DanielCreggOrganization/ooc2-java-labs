@@ -29,7 +29,8 @@ public class Main {
 			ex.printStackTrace();
 		}
 
-		// DESERIALIZATION - use try-with-resources block to handle the closure of the FileInputStream and ObjectInputStream
+		// DESERIALIZATION - use try-with-resources block to handle the closure of the 
+		// FileInputStream and ObjectInputStream
 		try (
 			// Create a FileInputStream to read from the specified file path
 			FileInputStream fis = new FileInputStream(FILE_PATH);
