@@ -51,7 +51,7 @@ public class Main {
             // Deserialize ArrayList object of Cars and stream from file
             List<Car> carList2 = (ArrayList<Car>) inputObjectStream.readObject();
             System.out.println("Car list object has been deserialized!");
-            System.out.println(carList2.toString());
+            System.out.println(carList2);
         } catch (Exception ex) { 
             ex.printStackTrace(); 
         }
