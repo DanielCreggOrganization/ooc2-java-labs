@@ -60,4 +60,8 @@ public class InputEventOutput extends Application {
 		primaryStage.show();
 	}
 
+	public static void main(String[] args) {
+		// Launch the application
+		launch(args);
+	}
 } // End Class
