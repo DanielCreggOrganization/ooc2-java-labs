@@ -24,20 +24,25 @@ public class TableViewExample extends Application {
         // Create a TableView
         TableView<Student> tableView = new TableView<>();
 
-        // Create a TableColumn for each field of the Student object
-        TableColumn<Student, String> nameColumn = new TableColumn<>(NAME_COLUMN_TITLE);
-        nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
-
+        // Create a TableColumn for the IDs of the students
         TableColumn<Student, Integer> idColumn = new TableColumn<>(ID_COLUMN_TITLE);
         idColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getId()).asObject());
 
+        // Create a TableColumn for the names of the students
+        TableColumn<Student, String> nameColumn = new TableColumn<>(NAME_COLUMN_TITLE);
+        nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
+       
+        // Create a TableColumn for the ages of the students
+        TableColumn<Student, Integer> ageColumn = new TableColumn<>("Age");
+        ageColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getAge()).asObject());
+
         // Add the columns to the TableView
-        tableView.getColumns().addAll(nameColumn, idColumn);
+        tableView.getColumns().addAll(idColumn, nameColumn, ageColumn);
 
         // Create a list of Student objects
         List<Student> students = Arrays.asList(
-                new Student("John Doe", 12345),
-                new Student("Jane Doe", 54321));
+                new Student("John", 12345, 20),
+                new Student("Jane", 54321, 21));
 
         // Set the items of the TableView to the list of students
         tableView.setItems(FXCollections.observableArrayList(students));
