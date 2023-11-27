@@ -4,58 +4,60 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Basic extends Application {
+	// Constants for literals
+	private static final String TITLE = "Say Hello to Someone";
+	private static final String BUTTON_TEXT = "Say Hello Button";
+	private static final String LABEL_TEXT = "Enter a name in the text box below then press the button to say hello!";
+	private static final String PROMPT_TEXT = "Enter your name here";
+	private static final String DEFAULT_OUTPUT = "Hello to nobody!";
+	private static final int SCENE_WIDTH = 470;
+	private static final int SCENE_HEIGHT = 200;
+
 	@Override
 	public void start(Stage primaryStage) {
-			// Create nodes
-			// First choose root node. Starting point of scene graph.
-//			StackPane root = new StackPane();
-//			HBox root = new HBox();
-			GridPane root = new GridPane();
-			
-			Label labelHello = new Label("Hello Label");
-			labelHello.setTextFill(Color.RED);
-			Button buttonHello = new Button("Say Hello Button");
-			
-			// Add event to button
-//			buttonHello.setOnAction(new EventHandler<ActionEvent>() {
-//				@Override
-//				public void handle(ActionEvent event) {
-//					labelHello.setText("Goodbye");
-//				}
-//			});
-//			buttonHello.setOnAction(event -> System.out.println("Hello!"));
-//			buttonHello.setOnAction(event -> labelHello.setText("Goodbye"));
-			buttonHello.setOnAction(event -> {
-				if (labelHello.getText() == "Hello Label") {
-					labelHello.setText("Goodbye");
-				} else {
-					labelHello.setText("Hello Label");
-				}	
-			});
-			// Add child node to root node
-//			root.getChildren().add(buttonHello);
-//			root.getChildren().add(labelHello);
-			root.add(buttonHello,1,0);
-			root.add(labelHello,0,0);
-			
-			// Create Scene and set it then show Stage
-//			Scene scene = new Scene(root);
-			Scene scene = new Scene(root, 300, 300);
-			primaryStage.setTitle("This is the primary stage title!");
-			primaryStage.setScene(scene);
-			primaryStage.show();
+		GridPane root = new GridPane();
+		Label labelHello = new Label(LABEL_TEXT);
+		labelHello.setTextFill(Color.RED);
+		Button buttonHello = new Button(BUTTON_TEXT);
 
+		// Create a text file for the user to enter their name
+		TextField inputTextBox = new TextField();
+		// Set the prompt text to appear in the text box. This is a hint to the user.
+		// Display prompty text when the txt box has the blinking cursor and no text
+		inputTextBox.setPromptText(PROMPT_TEXT);
+
+		// Create a text box area just for output
+		TextField outputTextBox = new TextField();
+		outputTextBox.setEditable(false);
+		// set the colour fill of the text box to light grey
+		outputTextBox.setStyle("-fx-background-color: lightgrey;");
+
+		// If the button is pressed take the input text and display it in the output
+		// text box
+		buttonHello.setOnAction(event -> {
+			String inputText = inputTextBox.getText();
+			// If the input text is empty then display the default output.
+			// The ? : is a ternary operator. It is a shorthand for an if-else statement.
+			outputTextBox.setText(inputText.isEmpty() ? DEFAULT_OUTPUT : "Hello " + inputText + "!");
+		});
+
+		// Add child node to root node
+		root.add(labelHello, 0, 0);
+		root.add(inputTextBox, 0, 1);
+		root.add(buttonHello, 0, 2);
+		root.add(outputTextBox, 0, 3);
+
+		// Create Scene and set it then show Stage
+		Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
+		primaryStage.setTitle(TITLE);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
-	
-	public static void main(String[] args) {
-		launch(args);
-	} // End Main
-	
+
 } // End Class

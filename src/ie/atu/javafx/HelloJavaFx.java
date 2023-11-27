@@ -33,4 +33,8 @@ public class HelloJavaFx extends Application {
         primaryStage.setScene(new Scene(root, SCENE_WIDTH, SCENE_HEIGHT));
         primaryStage.show();
     }
+    
+    public static void main(String[] args) {
+		launch(args);
+	} // End Main
 }
