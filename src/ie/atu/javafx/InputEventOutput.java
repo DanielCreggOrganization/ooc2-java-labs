@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 public class InputEventOutput extends Application {
 	// Constants for literals
 	private static final String TITLE = "Say Hello to Someone";
-	private static final String BUTTON_TEXT = "Say Hello Button";
 	private static final String LABEL_TEXT = "Enter a name in the text box below then press the button to say hello!";
 	private static final String PROMPT_TEXT = "Enter your name here";
+	private static final String BUTTON_TEXT = "Say Hello Button";
 	private static final String DEFAULT_OUTPUT = "Hello to nobody!";
 	private static final int SCENE_WIDTH = 470;
 	private static final int SCENE_HEIGHT = 200;
@@ -47,11 +47,11 @@ public class InputEventOutput extends Application {
 			outputTextBox.setText(inputText.isEmpty() ? DEFAULT_OUTPUT : "Hello " + inputText + "!");
 		});
 
-		// Add child node to root node
-		root.add(labelHello, 0, 0);
-		root.add(inputTextBox, 0, 1);
-		root.add(buttonHello, 0, 2);
-		root.add(outputTextBox, 0, 3);
+		// Add the nodes to the GridPane.
+		root.add(labelHello, 0, 0); // Column 0, Row 0
+		root.add(inputTextBox, 0, 1); // Column 0, Row 1
+		root.add(buttonHello, 0, 2); // Column 0, Row 2
+		root.add(outputTextBox, 0, 3); // Column 0, Row 3
 
 		// Create Scene and set it then show Stage
 		Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
