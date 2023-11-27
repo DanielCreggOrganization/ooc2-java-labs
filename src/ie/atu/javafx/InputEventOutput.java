@@ -9,7 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Basic extends Application {
+public class InputEventOutput extends Application {
 	// Constants for literals
 	private static final String TITLE = "Say Hello to Someone";
 	private static final String BUTTON_TEXT = "Say Hello Button";
