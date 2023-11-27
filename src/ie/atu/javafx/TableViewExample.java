@@ -12,6 +12,12 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class TableViewExample extends Application {
+    // Constants for literals
+    private static final String STAGE_TITLE = "Student Table";
+    private static final String NAME_COLUMN_TITLE = "Name";
+    private static final String ID_COLUMN_TITLE = "ID";
+    private static final int SCENE_WIDTH = 300;
+    private static final int SCENE_HEIGHT = 200;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -19,10 +25,10 @@ public class TableViewExample extends Application {
         TableView<Student> tableView = new TableView<>();
 
         // Create a TableColumn for each field of the Student object
-        TableColumn<Student, String> nameColumn = new TableColumn<>("Name");
+        TableColumn<Student, String> nameColumn = new TableColumn<>(NAME_COLUMN_TITLE);
         nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
 
-        TableColumn<Student, Integer> idColumn = new TableColumn<>("ID");
+        TableColumn<Student, Integer> idColumn = new TableColumn<>(ID_COLUMN_TITLE);
         idColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getId()).asObject());
 
         // Add the columns to the TableView
@@ -37,37 +43,12 @@ public class TableViewExample extends Application {
         tableView.setItems(FXCollections.observableArrayList(students));
 
         // Display the TableView
-        stage.setScene(new Scene(tableView));
+        stage.setTitle(STAGE_TITLE);
+        stage.setScene(new Scene(tableView, SCENE_WIDTH, SCENE_HEIGHT));
         stage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
-    }
-}
-
-class Student {
-    private String name;
-    private int id;
-
-    public Student(String name, int id) {
-        this.name = name;
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }
