@@ -25,13 +25,11 @@ public class InputEventOutput extends Application {
 		Label labelHello = new Label(LABEL_TEXT);
 		labelHello.setTextFill(Color.RED);
 		Button buttonHello = new Button(BUTTON_TEXT);
-
 		// Create a text file for the user to enter their name
 		TextField inputTextBox = new TextField();
 		// Set the prompt text to appear in the text box. This is a hint to the user.
 		// Display prompty text when the txt box has the blinking cursor and no text
 		inputTextBox.setPromptText(PROMPT_TEXT);
-
 		// Create a text box area just for output
 		TextField outputTextBox = new TextField();
 		outputTextBox.setEditable(false);
