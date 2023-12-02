@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReadInFile",
+            "request": "launch",
+            "mainClass": "ie.atu.args.ReadInFile",
+            "args": "./resources/EmployeeDetails.csv",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
