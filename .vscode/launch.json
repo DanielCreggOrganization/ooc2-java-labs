@@ -1,0 +1,268 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AskAQuestion",
+            "request": "launch",
+            "mainClass": "ie.atu.ai.AskAQuestion",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "HuggingFaceQuestionAnswering",
+            "request": "launch",
+            "mainClass": "ie.atu.ai.HuggingFaceQuestionAnswering",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ie.atu.ai.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ArgsDemo",
+            "request": "launch",
+            "mainClass": "ie.atu.args.ArgsDemo",
+            "projectName": "ooc2-java-solutions_61de128b",
+            "args": "1 2 3 4 5 6 7 8 9 10"
+        },
+        {
+            "type": "java",
+            "name": "ConvertArgsFormat",
+            "request": "launch",
+            "mainClass": "ie.atu.args.ConvertArgsFormat",
+            "projectName": "ooc2-java-solutions_61de128b",
+            "args": "5 10"
+        },
+        {
+            "type": "java",
+            "name": "MethodArgs",
+            "request": "launch",
+            "mainClass": "ie.atu.args.MethodArgs",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ArrayVsArrayList",
+            "request": "launch",
+            "mainClass": "ie.atu.collections.ArrayVsArrayList",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CollectionsExample",
+            "request": "launch",
+            "mainClass": "ie.atu.collections.CollectionsExample",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ListPerformanceCompare",
+            "request": "launch",
+            "mainClass": "ie.atu.collections.ListPerformanceCompare",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "Arithmetic",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.Arithmetic",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CheckedExceptionExample",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.CheckedExceptionExample",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "FinallyExample",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.FinallyExample",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "InputMismatch",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.InputMismatch",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "OutOfBounds",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.OutOfBounds",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "PlaneLanding",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.PlaneLanding",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ThrowUpStack",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.ThrowUpStack",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ThrowsExample",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.ThrowsExample",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "TryCatchCatchFinally",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.TryCatchCatchFinally",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "TryWithResources",
+            "request": "launch",
+            "mainClass": "ie.atu.exceptionhandling.TryWithResources",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CSVReader",
+            "request": "launch",
+            "mainClass": "ie.atu.io.CSVReader",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CopyFileByte",
+            "request": "launch",
+            "mainClass": "ie.atu.io.CopyFileByte",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CopyFileByteSimple",
+            "request": "launch",
+            "mainClass": "ie.atu.io.CopyFileByteSimple",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CopyFileChar",
+            "request": "launch",
+            "mainClass": "ie.atu.io.CopyFileChar",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "CopyFileCharBuffer",
+            "request": "launch",
+            "mainClass": "ie.atu.io.CopyFileCharBuffer",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "FileCopyWithBufferHamlet",
+            "request": "launch",
+            "mainClass": "ie.atu.io.FileCopyWithBufferHamlet",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "FileIOTest",
+            "request": "launch",
+            "mainClass": "ie.atu.io.FileIOTest",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "GradeAverager",
+            "request": "launch",
+            "mainClass": "ie.atu.io.GradeAverager",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "HamletReadWriteBytesWithBuffer",
+            "request": "launch",
+            "mainClass": "ie.atu.io.HamletReadWriteBytesWithBuffer",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "HelloJavaFx",
+            "request": "launch",
+            "mainClass": "ie.atu.javafx.HelloJavaFx",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "InputEventOutput",
+            "request": "launch",
+            "mainClass": "ie.atu.javafx.InputEventOutput",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "TableViewExample",
+            "request": "launch",
+            "mainClass": "ie.atu.javafx.TableViewExample",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "FilterArray",
+            "request": "launch",
+            "mainClass": "ie.atu.refresh.FilterArray",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "ie.atu.serialization.listserialization.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "ie.atu.serialization.objectserialization.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "FilterCollection",
+            "request": "launch",
+            "mainClass": "ie.atu.streams.filter.FilterCollection",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "ie.atu.streams.lambda.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        }
+    ]
+}
