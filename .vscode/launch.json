@@ -6,6 +6,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReadInArgFileNIO",
+            "request": "launch",
+            "mainClass": "ie.atu.args.ReadInArgFileNIO",
+            "args": "./resources/EmployeeDetails.csv",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
+            "name": "ReadInArgFileIO",
+            "request": "launch",
+            "mainClass": "ie.atu.args.ReadInArgFileIO",
+            "args": "./resources/EmployeeDetails.csv",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
             "name": "ReadInFile",
             "request": "launch",
             "mainClass": "ie.atu.args.ReadInFile",
