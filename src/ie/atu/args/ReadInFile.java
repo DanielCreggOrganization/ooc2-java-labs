@@ -14,7 +14,10 @@ public class ReadInFile {
         // Print the file contents
         try {
             // Use the Files.lines method to get a Stream of the lines in the file,
-            // then use the forEach method to print each line to the console
+            // then use the forEach method to print each line to the console.
+            // The double colon (::) is a method reference, which is a shorthand way 
+            // of writing a lambda expression that calls a single method e.g.
+            // line -> System.out.println(line))
             Files.lines(Paths.get(fileName)).forEach(System.out::println);
         } catch (IOException e) {
             // If an IOException is thrown (for example, if the file does not exist),
