@@ -11,11 +11,7 @@ public class ReadInFile {
         String fileName = args[0];
         // Print the file name to the console
         System.out.println("File name is: " + fileName);
-        // Call the method to print the file contents
-        printFileContents(fileName);
-    } // End of method main
-
-    public static void printFileContents(String fileName) {
+        // Print the file contents
         try {
             // Use the Files.lines method to get a Stream of the lines in the file,
             // then use the forEach method to print each line to the console
@@ -26,6 +22,5 @@ public class ReadInFile {
             System.out.println("An error occurred while reading the file.");
             e.printStackTrace();
         }
-    } // End of method printFileContents
-    
+    } // End of method main
 } // End of class ReadInFile
