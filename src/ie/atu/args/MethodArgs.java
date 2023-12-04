@@ -4,7 +4,7 @@ public class MethodArgs {
 	
 	public static void main(String[] args) {
 		
-		// Passing the integers 5 and 6 as arguments to this method.
+		// Call the add method. Pass two integers as arguments to this method.
 		add(5, 6); 
 				
 	} // End main
