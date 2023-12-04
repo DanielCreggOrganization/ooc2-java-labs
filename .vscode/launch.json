@@ -31,7 +31,7 @@
         {
             "type": "java",
             "name": "Current File",
-            "request": "launch",
+            "request": "launch",11
             "mainClass": "${file}"
         },
         {
