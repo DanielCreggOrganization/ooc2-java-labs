@@ -8,13 +8,13 @@ public class ArgsDemo {
 		System.out.println("The number of arguments passed to this program is " + args.length + ".");
 
 		// Print the arguments passed to this program
-//		System.out.println("The following command line arguments were passed:");
-//		for (int i = 0; i < args.length; i++) {
-//			// Print arguments
-//			System.out.println(args[i]);
-//			// Print arguments and display argument counter
-//			// System.out.println("Argument "+ (i + 1) + ": " + args[i]);
-//		}
+		System.out.println("The following command line arguments were passed:");
+		for (int i = 0; i < args.length; i++) {
+			// Print arguments
+			System.out.println(args[i]);
+			// Print arguments and display argument counter
+			// System.out.println("Argument "+ (i + 1) + ": " + args[i]);
+		}
 
 //		// Print ' ROCKS!' after every ATU arguments passed to this program
 //		System.out.println("Searching for ATU argument...");
