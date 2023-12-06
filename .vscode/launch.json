@@ -9,8 +9,8 @@
             "name": "ReadInArgFileNIO",
             "request": "launch",
             "mainClass": "ie.atu.args.ReadInArgFileNIO",
+            "projectName": "ooc2-java-solutions_61de128b",
             "args": "./resources/EmployeeDetails.csv",
-            "projectName": "ooc2-java-solutions_61de128b"
         },
         {
             "type": "java",
