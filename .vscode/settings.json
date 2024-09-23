@@ -16,6 +16,6 @@
         ".vscode": false
       },
       "java.dependency.packagePresentation": "hierarchical",
-      // increase font size
       "editor.fontSize": 18,
+      "editor.minimap.enabled": false,
 }
