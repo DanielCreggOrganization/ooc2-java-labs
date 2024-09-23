@@ -13,6 +13,13 @@ public class FilterArray {
             numbers[i] = i + 1;
         } // End of for loop
 
+        // // Populate the array with numbers 1 to 100 using a while loop
+        // int i = 0;
+        // while (i < numbers.length) {
+        //     numbers[i] = i + 1;
+        //     i++;
+        // } // End of while loop   
+
         // Use a for loop to iterate through the array and print out each element
         for (int i = 0; i < numbers.length; i++) {
             // Print all even numbers in the array. Find the sum of all even numbers in the
