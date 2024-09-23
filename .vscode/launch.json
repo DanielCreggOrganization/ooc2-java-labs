@@ -6,11 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ie.atu.refresh.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
             "name": "ReadInArgFileNIO",
             "request": "launch",
             "mainClass": "ie.atu.args.ReadInArgFileNIO",
             "projectName": "ooc2-java-solutions_61de128b",
-            "args": "./resources/EmployeeDetails.csv",
+            "args": "./resources/EmployeeDetails.csv"
         },
         {
             "type": "java",
