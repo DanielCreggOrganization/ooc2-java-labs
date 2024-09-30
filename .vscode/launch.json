@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ie.atu.lambda.Main",
+            "projectName": "ooc2-java-solutions_61de128b"
+        },
+        {
+            "type": "java",
             "name": "InbuiltFunctionalInterfaceExamples",
             "request": "launch",
             "mainClass": "ie.atu.lambda.InbuiltFunctionalInterfaceExamples",
